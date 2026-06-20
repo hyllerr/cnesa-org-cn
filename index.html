@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中关村储能产业技术联盟（CNESA）</title>
+<meta name="description" content="中关村储能产业技术联盟（CNESA）——中国第一个专注于储能领域的非营利性行业社团组织，致力于推动储能产业健康有序可持续发展。">
+<meta name="keywords" content="储能,CNESA,中关村储能产业技术联盟,新型储能,储能产业,能源存储">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<style>
+/* ========== Reset & Base ========== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body {
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-display: swap;
+  color: #1d1d1f;
+  background: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; transition: color .2s; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+/* ========== Utility ========== */
+.container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+.section-label {
+  font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+  color: #0071e3; margin-bottom: 12px;
+}
+.section-title {
+  font-size: clamp(28px, 4vw, 44px); font-weight: 700; line-height: 1.15;
+  margin-bottom: 16px; letter-spacing: -0.02em;
+}
+.section-desc {
+  font-size: 17px; line-height: 1.7; color: #6e6e73; max-width: 680px;
+}
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 12px 28px; border-radius: 980px; font-size: 15px; font-weight: 500;
+  background: #0071e3; color: #fff; transition: background .25s;
+}
+.btn-primary:hover { background: #0077ed; }
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 12px 28px; border-radius: 980px; font-size: 15px; font-weight: 500;
+  border: 1.5px solid #0071e3; color: #0071e3; transition: all .25s;
+}
+.btn-outline:hover { background: #0071e3; color: #fff; }
+.arrow-icon::after { content: '→'; margin-left: 4px; transition: transform .2s; }
+.link-arrow {
+  font-size: 15px; font-weight: 500; color: #0071e3;
+  display: inline-flex; align-items: center; gap: 4px;
+}
+.link-arrow::after { content: '›'; font-size: 20px; transition: transform .2s; }
+.link-arrow:hover::after { transform: translateX(3px); }
+
+/* ========== Navigation ========== */
+.nav-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(255,255,255,.82);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  height: 52px;
+}
+.nav-inner {
+  max-width: 1120px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between; height: 100%;
+}
+.nav-brand {
+  display: flex; align-items: center; gap: 10px;
+  color: #1d1d1f; white-space: nowrap;
+}
+.nav-logo {
+  height: 32px;
+  width: auto;
+}
+.nav-links { display: flex; align-items: center; gap: 32px; }
+.nav-links a {
+  font-size: 13px; font-weight: 400; color: #1d1d1f; opacity: .8;
+  transition: opacity .2s;
+}
+.nav-links a:hover { opacity: 1; }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+.nav-toggle span { width: 20px; height: 1.5px; background: #1d1d1f; border-radius: 1px; transition: all .3s; }
+.mobile-menu {
+  display: none; position: fixed; top: 52px; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,.98); backdrop-filter: blur(20px);
+  padding: 32px 24px; z-index: 999;
+}
+.mobile-menu.active { display: block; }
+.mobile-menu a {
+  display: block; padding: 16px 0; font-size: 17px; font-weight: 500;
+  border-bottom: 1px solid rgba(0,0,0,.06); color: #1d1d1f;
+}
+
+/* ========== Hero ========== */
+.hero {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 120px 24px 80px;
+  background: linear-gradient(180deg, #fbfbfd 0%, #fff 100%);
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: -30%; right: -20%;
+  width: 800px; height: 800px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,113,227,.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: ''; position: absolute; bottom: -20%; left: -15%;
+  width: 600px; height: 600px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(52,199,89,.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-content { position: relative; z-index: 1; max-width: 800px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 16px; border-radius: 980px; font-size: 13px; font-weight: 500;
+  background: rgba(0,113,227,.08); color: #0071e3; margin-bottom: 28px;
+}
+.hero-badge .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #34c759; animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .4; } }
+.hero h1 {
+  font-size: clamp(36px, 6vw, 64px); font-weight: 700; line-height: 1.08;
+  letter-spacing: -0.03em; margin-bottom: 20px;
+}
+.hero h1 .text-gradient {
+  background: linear-gradient(135deg, #0071e3, #34c759);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-sub {
+  font-size: clamp(16px, 2.2vw, 20px); line-height: 1.6; color: #6e6e73;
+  max-width: 640px; margin: 0 auto 40px;
+}
+.hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* ========== Stats Bar ========== */
+.stats-bar {
+  padding: 64px 0;
+  background: #f5f5f7;
+}
+.stats-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center;
+}
+.stat-item .stat-num {
+  font-size: clamp(32px, 4vw, 48px); font-weight: 700; line-height: 1.1;
+  background: linear-gradient(135deg, #0071e3, #34c759);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.stat-item .stat-label { font-size: 14px; color: #6e6e73; margin-top: 8px; }
+
+/* ========== About Section ========== */
+.about {
+  padding: 120px 0;
+}
+.about-grid {
+  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; align-items: center;
+}
+.about-text .section-desc { margin-bottom: 28px; }
+.about-badges { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+.about-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 16px; border-radius: 980px; font-size: 13px; font-weight: 500;
+  background: #f5f5f7; color: #1d1d1f;
+}
+.about-badge .badge-icon { font-size: 16px; }
+.about-visual {
+  position: relative; border-radius: 24px; overflow: hidden;
+  background: linear-gradient(135deg, #fafafa, #f0f0f5);
+  min-height: 380px; display: flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+.about-visual-inner {
+  text-align: center; padding: 40px 32px;
+}
+.about-visual-inner .year-since {
+  font-size: 72px; font-weight: 700; line-height: 1;
+  background: linear-gradient(135deg, #0071e3, #34c759);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.about-visual-inner .year-label {
+  font-size: 16px; color: #6e6e73; margin-top: 6px;
+}
+.timeline-items { margin-top: 28px; text-align: left; }
+.timeline-item {
+  display: flex; align-items: baseline; gap: 12px; padding: 10px 0;
+  font-size: 14px; color: #6e6e73;
+}
+.timeline-item .tl-year { font-weight: 600; color: #0071e3; min-width: 68px; }
+
+/* ========== Core Work ========== */
+.core-work {
+  padding: 120px 0;
+  background: #fbfbfd;
+}
+.core-work .section-header { text-align: center; margin-bottom: 64px; }
+.core-work .section-desc { margin: 0 auto; }
+.work-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.work-card {
+  background: #fff; border-radius: 20px; padding: 40px 32px;
+  transition: transform .3s, box-shadow .3s; cursor: default;
+  border: 1px solid rgba(0,0,0,.04);
+}
+.work-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.06); }
+.work-icon {
+  width: 48px; height: 48px; border-radius: 14px; margin-bottom: 20px;
+  display: flex; align-items: center; justify-content: center;
+}
+.work-icon svg {
+  width: 28px;
+  height: 28px;
+  color: inherit;
+}
+.work-card h3 { font-size: 20px; font-weight: 600; margin-bottom: 10px; }
+.work-card p { font-size: 15px; color: #6e6e73; line-height: 1.65; margin-bottom: 20px; }
+.icon-research { background: linear-gradient(135deg, #e3f0ff, #cce4ff); }
+.icon-policy { background: linear-gradient(135deg, #e8fae8, #c8f0c8); }
+.icon-standard { background: linear-gradient(135deg, #fff3e0, #ffe8cc); }
+.icon-data { background: linear-gradient(135deg, #f0e6ff, #e0d0ff); }
+.icon-event { background: linear-gradient(135deg, #ffe6e6, #ffd0d0); }
+.icon-intl { background: linear-gradient(135deg, #e6f7ff, #ccefff); }
+
+/* ========== Platforms ========== */
+.platforms {
+  padding: 120px 0;
+}
+.platforms .section-header { text-align: center; margin-bottom: 64px; }
+.platforms .section-desc { margin: 0 auto; }
+.platform-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+}
+.platform-card {
+  display: flex; align-items: center; gap: 20px;
+  padding: 28px 32px; border-radius: 16px; background: #f5f5f7;
+  transition: all .3s; border: 1px solid transparent;
+}
+.platform-card:hover {
+  background: #fff; border-color: rgba(0,113,227,.15);
+  box-shadow: 0 4px 20px rgba(0,0,0,.05); transform: translateY(-2px);
+}
+.platform-icon {
+  flex-shrink: 0; width: 52px; height: 52px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  background: #fff;
+}
+.platform-icon svg {
+  width: 26px;
+  height: 26px;
+  color: #1d1d1f;
+}
+.platform-card:hover .platform-icon { background: #f5f5f7; }
+.platform-info h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.platform-info p { font-size: 13px; color: #86868b; line-height: 1.5; }
+.platform-tag {
+  margin-left: auto; flex-shrink: 0; font-size: 12px; color: #0071e3;
+  padding: 4px 12px; border-radius: 980px; background: rgba(0,113,227,.06);
+}
+
+/* ========== Publications Section ========== */
+.publications {
+  padding: 120px 0;
+  background: #fbfbfd;
+}
+.publications .section-header { text-align: center; margin-bottom: 64px; }
+.publications .section-desc { margin: 0 auto; }
+.pub-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+}
+.pub-card {
+  background: #fff; border-radius: 16px; padding: 32px 24px; text-align: center;
+  transition: all .3s; border: 1px solid rgba(0,0,0,.04);
+}
+.pub-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,.06); }
+.pub-icon {
+  width: 56px; height: 56px; border-radius: 16px; margin: 0 auto 16px;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #f5f5f7, #e8e8ed);
+}
+.pub-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #1d1d1f;
+}
+.pub-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.pub-card p { font-size: 13px; color: #86868b; line-height: 1.5; }
+
+/* ========== CTA Section ========== */
+.cta-section {
+  padding: 120px 0;
+  text-align: center;
+}
+.cta-section .section-title { max-width: 600px; margin: 0 auto 16px; }
+.cta-section .section-desc { margin: 0 auto 40px; }
+.cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* ========== Footer ========== */
+.site-footer {
+  background: #1d1d1f; color: #86868b; padding: 64px 0 32px;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+  padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.footer-brand .footer-logo {
+  margin-bottom: 16px;
+}
+.footer-logo-img {
+  height: 40px;
+  width: auto;
+}
+.footer-brand p { font-size: 13px; line-height: 1.7; max-width: 320px; }
+.footer-col h4 {
+  font-size: 12px; font-weight: 600; color: #f5f5f7; letter-spacing: 1px;
+  text-transform: uppercase; margin-bottom: 16px;
+}
+.footer-col a {
+  display: block; font-size: 13px; color: #86868b; padding: 4px 0;
+  transition: color .2s;
+}
+.footer-col a:hover { color: #f5f5f7; }
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 24px; font-size: 12px; flex-wrap: wrap; gap: 12px;
+}
+.footer-bottom a { color: #86868b; margin-left: 16px; }
+.footer-bottom a:hover { color: #f5f5f7; }
+
+/* ========== Scroll Animations ========== */
+.fade-in {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* ========== Responsive ========== */
+@media (max-width: 1024px) {
+  .work-grid { grid-template-columns: repeat(2, 1fr); }
+  .pub-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .hero { min-height: auto; padding: 120px 24px 72px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .about-grid { grid-template-columns: 1fr; gap: 48px; }
+  .work-grid { grid-template-columns: 1fr; }
+  .platform-grid { grid-template-columns: 1fr; }
+  .pub-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- ====== Navigation ====== -->
+<nav class="nav-bar">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <img src="./images/logo_cnesa.png" alt="CNESA 中关村储能产业技术联盟" class="nav-logo" loading="eager" decoding="async">
+    </a>
+    <div class="nav-links">
+      <a href="https://www.cnesa.org/information/?column_id=1" target="_blank">行业资讯</a>
+      <a href="https://www.cnesa.org/policy/?column_id=6" target="_blank">政策推动</a>
+      <a href="https://www.esresearch.com.cn/" target="_blank">产业研究</a>
+      <a href="https://www.cnesa.org/standard/?column_id=20" target="_blank">产业标准</a>
+      <a href="https://www.cnesa.org/activity/?column_id=11" target="_blank">活动交流</a>
+      <a href="https://www.cnesa.org/union/member/" target="_blank">联盟会员</a>
+      <a href="https://en.cnesa.org" target="_blank">English</a>
+    </div>
+    <div class="nav-toggle" onclick="document.querySelector('.mobile-menu').classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="https://www.cnesa.org/information/?column_id=1" target="_blank">行业资讯</a>
+  <a href="https://www.cnesa.org/policy/?column_id=6" target="_blank">政策推动</a>
+  <a href="https://www.esresearch.com.cn/" target="_blank">产业研究</a>
+  <a href="https://www.cnesa.org/standard/?column_id=20" target="_blank">产业标准</a>
+  <a href="https://www.cnesa.org/activity/?column_id=11" target="_blank">活动交流</a>
+  <a href="https://www.cnesa.org/union/member/" target="_blank">联盟会员</a>
+  <a href="https://en.cnesa.org" target="_blank">English</a>
+</div>
+
+<!-- ====== Hero ====== -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      5A 级社会组织 · 成立于 2010 年
+    </div>
+    <h1>推动<span class="text-gradient">储能产业</span><br>健康、有序、可持续发展</h1>
+    <p class="hero-sub">中关村储能产业技术联盟（CNESA）是中国第一个专注于储能领域的非营利性行业社团组织，聚集 800 余家产业链成员单位，致力于影响政策制定与技术应用推广，促进产业健康有序可持续发展。</p>
+    <div class="hero-btns">
+      <a href="https://www.cnesa.org/union/?column_id=23" target="_blank" class="btn-primary">了解联盟 →</a>
+      <a href="https://www.cnesa.org/union/member/" target="_blank" class="btn-outline">加入会员</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Stats Bar ====== -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item fade-in">
+        <div class="stat-num">15+</div>
+        <div class="stat-label">年深耕储能产业</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-num">800+</div>
+        <div class="stat-label">国内外成员单位</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-num">5A</div>
+        <div class="stat-label">社会组织等级（连续两届）</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-num">30+</div>
+        <div class="stat-label">已发布团体标准</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== About ====== -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <div class="section-label">关于联盟</div>
+        <p class="section-desc">中关村储能产业技术联盟创立于 2010 年 3 月，2012 年获批为北京市一级社团组织。联盟聚集了优秀的储能技术厂商、新能源产业公司、电力系统及相关领域的科研院所和高校，覆盖储能全产业链各参与方。</p>
+        <div class="about-badges">
+          <span class="about-badge"><span class="badge-icon">🏛</span> 北京市一级社团</span>
+          <span class="about-badge"><span class="badge-icon">⭐</span> 5A 级社会组织</span>
+          <span class="about-badge"><span class="badge-icon">🌐</span> 800+ 成员单位</span>
+        </div>
+        <p class="section-desc" style="font-size:15px;">2016 年 9 月，在国家能源局支持下，中国能源研究会储能专业委员会成立，秘书处由中关村储能产业技术联盟承担并运营，发挥专家智库职能，支撑政府制定储能产业发展战略。</p>
+        <div style="margin-top: 32px;">
+          <a href="https://www.cnesa.org/union/?column_id=23" target="_blank" class="link-arrow">查看联盟详细介绍</a>
+        </div>
+      </div>
+      <div class="about-visual fade-in">
+        <div class="about-visual-inner">
+          <div class="year-since">2010</div>
+          <div class="year-label">创立年份</div>
+          <div class="timeline-items">
+            <div class="timeline-item"><span class="tl-year">2010</span> 联盟正式创立</div>
+            <div class="timeline-item"><span class="tl-year">2012</span> 获批一级社团组织</div>
+            <div class="timeline-item"><span class="tl-year">2015至今</span> 连续获评 5A 级</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Core Work ====== -->
+<section class="core-work" id="work">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">核心业务</div>
+      <h2 class="section-title">五大基础服务平台</h2>
+      <p class="section-desc">构建完善的产业服务体系，全方位推动储能产业健康发展</p>
+    </div>
+    <div class="work-grid">
+      <a href="https://www.esresearch.com.cn/" target="_blank" class="work-card fade-in">
+        <div class="work-icon icon-research">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3V21H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 17L11 13L15 15L19 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 7H19V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>产业研究</h3>
+        <p>基于全球储能数据库，发布白皮书、研究报告，提供市场数据、政策分析、项目跟踪与技术洞见。</p>
+        <span class="link-arrow">了解更多</span>
+      </a>
+      <a href="https://www.cnesa.org/policy/?column_id=55" target="_blank" class="work-card fade-in">
+        <div class="work-icon icon-policy">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 2H6C5 2 4 3 4 4V20C4 21 5 22 6 22H18C19 22 20 21 20 20V8L14 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 2V8H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 13H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M8 17H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>政策推动</h3>
+        <p>支撑政府研究制定储能产业发展战略，推动建立产业机制，倡导产业发展模式与重点方向。</p>
+        <span class="link-arrow">了解更多</span>
+      </a>
+      <a href="https://www.cnesa.org/activity/?column_id=11" target="_blank" class="work-card fade-in">
+        <div class="work-icon icon-event">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>活动交流</h3>
+        <p>主办储能国际峰会暨展览会（ESIE），以及创新大赛、论坛活动、公益沙龙、产业培训等。</p>
+        <span class="link-arrow">了解更多</span>
+      </a>
+      <a href="#" class="work-card fade-in">
+        <div class="work-icon icon-data">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="12" cy="5" rx="9" ry="3" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M21 5V19C21 20.657 16.523 22 12 22C7.477 22 3 20.657 3 19V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M3 12C3 13.657 7.477 15 12 15C16.523 15 21 13.657 21 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>金融服务</h3>
+        <p>搭建产业金融交流平台，促进资本与技术对接，推动储能项目落地与产业规模化发展。</p>
+        <span class="link-arrow">了解更多</span>
+      </a>
+      <a href="https://www.cnesa.org/standard/?column_id=20" target="_blank" class="work-card fade-in">
+        <div class="work-icon icon-standard">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3L21 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M3 21L11.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M13 13L21 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>联盟标准</h3>
+        <p>推动团体标准制修订，已发布 30 多项联盟标准，积极参与国际标准工作，驱动行业规范化发展。</p>
+        <span class="link-arrow">了解更多</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Platforms ====== -->
+<section class="platforms" id="platforms">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">业务平台</div>
+      <h2 class="section-title">七大数字化平台，一站触达</h2>
+      <p class="section-desc">联盟旗下覆盖资讯、研究、展会、安全、自律等全方位的数字化服务矩阵</p>
+    </div>
+    <div class="platform-grid">
+      <a href="https://www.cnesa.org" target="_blank" class="platform-card fade-in">
+        <div class="platform-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="platform-info">
+          <h3>联盟中文官网</h3>
+          <p>联盟综合门户，资讯、会员、标准发布、行业活动展示</p>
+        </div>
+        <span class="platform-tag">cnesa.org</span>
+      </a>
+      <a href="https://en.cnesa.org" target="_blank" class="platform-card fade-in">
+        <div class="platform-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M2 12H22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M12 2C14.5 4.5 14.5 19.5 12 22C9.5 19.5 9.5 4.5 12 2Z" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="platform-info">
+          <h3>联盟英文官网</h3>
+          <p>国际合作、海外品牌宣传展示</p>
+        </div>
+        <span class="platform-tag">en.cnesa.org</span>
+      </a>
+      <a href="https://www.esresearch.com.cn" target="_blank" class="platform-card fade-in">
+        <div class="platform-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3V21H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 17L11 13L15 15L19 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 7H19V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="platform-info">
+          <h3>储能研究平台</h3>
+          <p>核心数据平台，承载行业数据库、研究报告</p>
+        </div>
+        <span class="platform-tag">esresearch.com.cn</span>
+      </a>
+      <a href="https://selfregu.cnesa.org" target="_blank" class="platform-card fade-in">
+        <div class="platform-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2V22M19.5 12H4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M4.5 5L12 12L19.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4.5 19L12 12L19.5 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="platform-info">
+          <h3>行业自律平台</h3>
+          <p>行业自律管理系统</p>
+        </div>
+        <span class="platform-tag">selfregu.cnesa.org</span>
+      </a>
+      <a href="https://www.esexpo.org" target="_blank" class="platform-card fade-in">
+        <div class="platform-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 19H5C4.44772 19 4 18.5523 4 18V6C4 5.44772 4.44772 5 5 5H19C19.5523 5 20 5.44772 20 6V18C20 18.5523 19.5523 19 19 19Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M8 2V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M16 2V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M8 19V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M16 19V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M4 8H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="platform-info">
+          <h3>储能展会中文官网</h3>
+          <p>国内峰会招商、参展及观众报名</p>
+        </div>
+        <span class="platform-tag">esexpo.org</span>
+      </a>
+      <a href="https://en.esexpo.org" target="_blank" class="platform-card fade-in">
+        <div class="platform-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 16V18L14 15L7 18V6L14 3L21 6V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 21V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="platform-info">
+          <h3>储能展会英文官网</h3>
+          <p>境外招商宣传</p>
+        </div>
+        <span class="platform-tag">en.esexpo.org</span>
+      </a>
+      <a href="https://www.essafety.cn" target="_blank" class="platform-card fade-in">
+        <div class="platform-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="platform-info">
+          <h3>储能安全平台</h3>
+          <p>储能安全专项平台</p>
+        </div>
+        <span class="platform-tag">essafety.cn</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Publications ====== -->
+<section class="publications" id="publications">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">研究成果</div>
+      <h2 class="section-title">权威研究，洞察产业趋势</h2>
+      <p class="section-desc">联盟已搭建成熟完备的研究体系，通过多种期刊与报告与产业同仁共享研究成果</p>
+    </div>
+    <div class="pub-grid">
+      <a href="https://www.cnesa.org/periodical/?column_id=90" target="_blank" class="pub-card fade-in">
+        <div class="pub-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6.5 2H20V22H6.5C5.83696 22 5.20107 21.7366 4.73223 21.2678C4.26339 20.7989 4 20.163 4 19.5V4.5C4 3.83696 4.26339 3.20107 4.73223 2.73223C5.20107 2.26339 5.83696 2 6.5 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>储能产业研究白皮书</h3>
+        <p>连续发布15年的金牌产品</p>
+      </a>
+      <a href="https://www.cnesa.org/periodical/?column_id=32" target="_blank" class="pub-card fade-in">
+        <div class="pub-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 5H22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M2 9H22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M2 13H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M2 17H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M2 21H22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>储能产业趋势</h3>
+        <p>创刊于2011年的月度刊物，中英文版</p>
+      </a>
+      <a href="https://www.cnesa.org/periodical/?column_id=33" target="_blank" class="pub-card fade-in">
+        <div class="pub-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 2H6C5 2 4 3 4 4V20C4 21 5 22 6 22H18C19 22 20 21 20 20V8L14 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 2V8H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 13H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M8 17H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>储能政策月报</h3>
+        <p>国家与地方储能支持政策月度梳理</p>
+      </a>
+      <a href="https://www.cnesa.org/periodical/?column_id=73" target="_blank" class="pub-card fade-in">
+        <div class="pub-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3V21H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 17L11 13L15 15L19 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 7H19V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>全球储能市场跟踪报告</h3>
+        <p>全球储能市场发展动态季度跟踪与分析</p>
+      </a>
+      <a href="https://www.cnesa.org/periodical/?column_id=54" target="_blank" class="pub-card fade-in">
+        <div class="pub-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M3 10H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M10 3V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>专题研究报告</h3>
+        <p>细分领域深度研究与市场分析</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA Section ====== -->
+<section class="cta-section">
+  <div class="container fade-in">
+    <div class="section-label">加入我们</div>
+    <h2 class="section-title">与 800+ 储能产业链伙伴<br>共建行业未来</h2>
+    <p class="section-desc">成为联盟会员，获取行业前沿资讯、优质数据服务、产业交流机会与政策支持</p>
+    <div class="cta-btns">
+      <a href="https://www.cnesa.org/union/member/" target="_blank" class="btn-primary">查看会员权益 →</a>
+      <a href="https://www.cnesa.org/union/?column_id=25" target="_blank" class="btn-outline">联系我们</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Footer ====== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="./images/logo_cnesa-white.png" alt="CNESA 中关村储能产业技术联盟" class="footer-logo-img" loading="lazy" decoding="async">
+        </div>
+        <p>中国第一个专注于储能领域的非营利性行业社团组织，致力于推动储能产业健康有序可持续发展。</p>
+        <p style="margin-top:12px;">中国能源研究会储能专业委员会秘书处</p>
+      </div>
+      <div class="footer-col">
+        <h4>快速导航</h4>
+        <a href="https://www.cnesa.org/information/?column_id=1" target="_blank">行业资讯</a>
+        <a href="https://www.cnesa.org/policy/?column_id=6" target="_blank">政策推动</a>
+        <a href="https://www.esresearch.com.cn/" target="_blank">产业研究</a>
+        <a href="https://www.cnesa.org/standard/?column_id=20" target="_blank">产业标准</a>
+        <a href="https://www.cnesa.org/activity/?column_id=11" target="_blank">活动交流</a>
+      </div>
+      <div class="footer-col">
+        <h4>关于联盟</h4>
+        <a href="https://www.cnesa.org/union/?column_id=23" target="_blank">组织介绍</a>
+        <a href="https://www.cnesa.org/union/?column_id=24" target="_blank">组织架构</a>
+        <a href="https://www.cnesa.org/union/member/" target="_blank">联盟会员</a>
+        <a href="https://www.cnesa.org/union/expert/" target="_blank">储能专委会</a>
+        <a href="https://www.cnesa.org/union/?column_id=25" target="_blank">联系我们</a>
+      </div>
+      <div class="footer-col">
+        <h4>业务平台</h4>
+        <a href="https://www.esresearch.com.cn" target="_blank">储能研究平台</a>
+        <a href="https://www.esexpo.org" target="_blank">储能展会</a>
+        <a href="https://selfregu.cnesa.org" target="_blank">自律平台</a>
+        <a href="https://www.essafety.cn" target="_blank">储能安全平台</a>
+        <a href="https://en.cnesa.org" target="_blank">English Site</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2010 – 2026 中关村储能产业技术联盟（CNESA）版权所有</span>
+      <div>
+        <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备18018056号-3</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== Scroll Animation ====== -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+});
+</script>
+</body>
+</html>
