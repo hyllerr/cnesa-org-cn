@@ -237,35 +237,49 @@ ul { list-style: none; }
 }
 .platforms .section-header { text-align: center; margin-bottom: 64px; }
 .platforms .section-desc { margin: 0 auto; }
+.platform-layout {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start;
+}
 .platform-grid {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+  display: grid; grid-template-columns: 1fr; gap: 0;
+  background: #f5f5f7;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.04);
 }
 .platform-card {
-  display: flex; align-items: center; gap: 20px;
-  padding: 28px 32px; border-radius: 16px; background: #f5f5f7;
-  transition: transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s cubic-bezier(.16,1,.3,1), background .3s, border-color .3s;
-  border: 1px solid transparent;
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 20px;
+  transition: background .2s;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+.platform-card:last-child {
+  border-bottom: none;
 }
 .platform-card:hover {
-  background: #fff; border-color: rgba(0,113,227,.12);
-  box-shadow: 0 8px 30px rgba(0,0,0,.06); transform: translateY(-4px);
+  background: rgba(0,113,227,.04);
 }
 .platform-icon {
-  flex-shrink: 0; width: 52px; height: 52px; border-radius: 14px;
+  flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
   background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
 .platform-icon svg {
-  width: 26px;
-  height: 26px;
+  width: 20px;
+  height: 20px;
   color: #0071e3;
 }
-.platform-card:hover .platform-icon { background: #f5f5f7; }
-.platform-info h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; line-height: 1.4; }
-.platform-info p { font-size: 13px; color: #86868b; line-height: 1.5; }
-.platform-tag {
-  margin-left: auto; flex-shrink: 0; font-size: 12px; color: #0071e3;
-  padding: 4px 12px; border-radius: 980px; background: rgba(0,113,227,.06);
+.platform-info h3 { font-size: 14px; font-weight: 600; margin-bottom: 2px; line-height: 1.2; }
+.platform-info p { font-size: 11px; color: #86868b; line-height: 1.3; }
+.platform-image {
+  position: sticky; top: 100px;
+  border-radius: 20px; overflow: hidden;
+  background: #f5f5f7;
+  border: 1px solid rgba(0,0,0,.04);
+}
+.platform-image img {
+  width: 100%; height: auto; display: block;
 }
 
 /* ========== Publications Section ========== */
@@ -390,6 +404,8 @@ ul { list-style: none; }
   .work-grid { grid-template-columns: repeat(2, 1fr); }
   .pub-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .platform-layout { grid-template-columns: 1fr; gap: 32px; }
+  .platform-image { position: static; }
 }
 @media (max-width: 768px) {
   .nav-links { display: none; }
@@ -591,97 +607,102 @@ ul { list-style: none; }
       <h2 class="section-title">七大数字化平台，一站触达</h2>
       <p class="section-desc">联盟旗下覆盖资讯、研究、展会、安全、自律等全方位的数字化服务矩阵</p>
     </div>
-    <div class="platform-grid">
-      <a href="https://www.cnesa.org" target="_blank" class="platform-card fade-in">
-        <div class="platform-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="platform-info">
-          <h3>联盟中文官网</h3>
-          <p>联盟综合门户，资讯、会员、标准发布、行业活动展示</p>
-        </div>
-      </a>
-      <a href="https://en.cnesa.org" target="_blank" class="platform-card fade-in">
-        <div class="platform-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M2 12H22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M12 2C14.5 4.5 14.5 19.5 12 22C9.5 19.5 9.5 4.5 12 2Z" stroke="currentColor" stroke-width="1.5"/>
-          </svg>
-        </div>
-        <div class="platform-info">
-          <h3>联盟英文官网</h3>
-          <p>国际合作、海外品牌宣传展示</p>
-        </div>
-      </a>
-      <a href="https://www.esresearch.com.cn" target="_blank" class="platform-card fade-in">
-        <div class="platform-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 3V21H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M7 17L11 13L15 15L19 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M15 7H19V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="platform-info">
-          <h3>储能研究平台</h3>
-          <p>核心数据平台，承载行业数据库、研究报告</p>
-        </div>
-      </a>
-      <a href="https://selfregu.cnesa.org" target="_blank" class="platform-card fade-in">
-        <div class="platform-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2V22M19.5 12H4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M4.5 5L12 12L19.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M4.5 19L12 12L19.5 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="platform-info">
-          <h3>行业自律平台</h3>
-          <p>行业自律管理系统</p>
-        </div>
-      </a>
-      <a href="https://www.esexpo.org" target="_blank" class="platform-card fade-in">
-        <div class="platform-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19 19H5C4.44772 19 4 18.5523 4 18V6C4 5.44772 4.44772 5 5 5H19C19.5523 5 20 5.44772 20 6V18C20 18.5523 19.5523 19 19 19Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M8 2V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M16 2V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M8 19V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M16 19V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M4 8H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="platform-info">
-          <h3>储能国际峰会暨展览会<wbr>ESIE中文官网</h3>
-          <p>国内峰会招商、参展及观众报名</p>
-        </div>
-      </a>
-      <a href="https://en.esexpo.org" target="_blank" class="platform-card fade-in">
-        <div class="platform-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21 16V18L14 15L7 18V6L14 3L21 6V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M3 21V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="platform-info">
-          <h3>储能国际峰会暨展览会<wbr>ESIE英文官网</h3>
-          <p>境外参展及观众报名</p>
-        </div>
-      </a>
-      <a href="https://www.essafety.cn" target="_blank" class="platform-card fade-in">
-        <div class="platform-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="platform-info">
-          <h3>储能安全平台</h3>
-          <p>储能安全专项平台</p>
-        </div>
-      </a>
+    <div class="platform-layout">
+      <div class="platform-grid">
+        <a href="https://www.cnesa.org" target="_blank" class="platform-card fade-in">
+          <div class="platform-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="platform-info">
+            <h3>联盟中文官网</h3>
+            <p>联盟综合门户，资讯、会员、标准发布、行业活动展示</p>
+          </div>
+        </a>
+        <a href="https://en.cnesa.org" target="_blank" class="platform-card fade-in">
+          <div class="platform-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M2 12H22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M12 2C14.5 4.5 14.5 19.5 12 22C9.5 19.5 9.5 4.5 12 2Z" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="platform-info">
+            <h3>联盟英文官网</h3>
+            <p>国际合作、海外品牌宣传展示</p>
+          </div>
+        </a>
+        <a href="https://www.esresearch.com.cn" target="_blank" class="platform-card fade-in">
+          <div class="platform-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 3V21H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 17L11 13L15 15L19 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7H19V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="platform-info">
+            <h3>储能研究平台</h3>
+            <p>核心数据平台，承载行业数据库、研究报告</p>
+          </div>
+        </a>
+        <a href="https://selfregu.cnesa.org" target="_blank" class="platform-card fade-in">
+          <div class="platform-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2V22M19.5 12H4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M4.5 5L12 12L19.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4.5 19L12 12L19.5 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="platform-info">
+            <h3>行业自律平台</h3>
+            <p>行业自律管理系统</p>
+          </div>
+        </a>
+        <a href="https://www.esexpo.org" target="_blank" class="platform-card fade-in">
+          <div class="platform-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 19H5C4.44772 19 4 18.5523 4 18V6C4 5.44772 4.44772 5 5 5H19C19.5523 5 20 5.44772 20 6V18C20 18.5523 19.5523 19 19 19Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M8 2V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M16 2V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M8 19V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M16 19V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M4 8H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="platform-info">
+            <h3>储能国际峰会暨展览会<wbr>ESIE中文官网</h3>
+            <p>国内峰会招商、参展及观众报名</p>
+          </div>
+        </a>
+        <a href="https://en.esexpo.org" target="_blank" class="platform-card fade-in">
+          <div class="platform-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 16V18L14 15L7 18V6L14 3L21 6V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 21V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="platform-info">
+            <h3>储能国际峰会暨展览会<wbr>ESIE英文官网</h3>
+            <p>境外参展及观众报名</p>
+          </div>
+        </a>
+        <a href="https://www.essafety.cn" target="_blank" class="platform-card fade-in">
+          <div class="platform-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="platform-info">
+            <h3>储能安全平台</h3>
+            <p>储能安全专项平台</p>
+          </div>
+        </a>
+      </div>
+      <div class="platform-image fade-in">
+        <img src="./images/bg_platform.PNG" alt="七大数字化平台" loading="lazy" decoding="async">
+      </div>
     </div>
   </div>
 </section>
