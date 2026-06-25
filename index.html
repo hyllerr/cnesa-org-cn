@@ -352,18 +352,13 @@ ul { list-style: none; }
   width: 48px; height: 48px; border-radius: 14px; margin-bottom: 20px;
   display: flex; align-items: center; justify-content: center;
 }
-.work-icon svg {
-  width: 28px;
-  height: 28px;
-  color: inherit;
+.work-icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
 .work-card h3 { font-size: 20px; font-weight: 600; margin-bottom: 10px; }
 .work-card p { font-size: 15px; color: #6e6e73; line-height: 1.65; margin-bottom: 20px; }
-.icon-research { background: linear-gradient(135deg, #e3f0ff, #cce4ff); }
-.icon-policy { background: linear-gradient(135deg, #e8fae8, #c8f0c8); }
-.icon-standard { background: linear-gradient(135deg, #fff3e0, #ffe8cc); }
-.icon-data { background: linear-gradient(135deg, #f0e6ff, #e0d0ff); }
-.icon-event { background: linear-gradient(135deg, #ffe6e6, #ffd0d0); }
 .icon-intl { background: linear-gradient(135deg, #e6f7ff, #ccefff); }
 
 /* ========== Platforms ========== */
@@ -722,11 +717,7 @@ ul { list-style: none; }
     <div class="work-grid">
       <a href="https://www.esresearch.com.cn/" target="_blank" class="work-card fade-in">
         <div class="work-icon icon-research">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="5" y="15" width="3.5" height="5" rx="1.2" stroke="currentColor" stroke-width="1.8"/>
-            <rect x="10.25" y="9" width="3.5" height="11" rx="1.2" stroke="currentColor" stroke-width="1.8"/>
-            <rect x="15.5" y="4" width="3.5" height="16" rx="1.2" stroke="currentColor" stroke-width="1.8"/>
-          </svg>
+          <img src="./images/platform_research.png" alt="产业研究" width="28" height="28">
         </div>
         <h3>产业研究</h3>
         <p>基于全球储能数据库，发布白皮书、研究报告，提供市场数据、政策分析、项目跟踪与技术洞见。</p>
@@ -734,11 +725,7 @@ ul { list-style: none; }
       </a>
       <a href="https://www.cnesa.org/policy/?column_id=55" target="_blank" class="work-card fade-in">
         <div class="work-icon icon-policy">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 21V10L12 3L20 10V21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            <line x1="1" y1="21" x2="23" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <rect x="9" y="14" width="6" height="7" rx="0.8" stroke="currentColor" stroke-width="1.8"/>
-          </svg>
+          <img src="./images/platform_policy.png" alt="政策推动" width="28" height="28">
         </div>
         <h3>政策推动</h3>
         <p>支撑政府研究制定储能产业发展战略，推动建立产业机制，倡导产业发展模式与重点方向。</p>
@@ -746,11 +733,7 @@ ul { list-style: none; }
       </a>
       <a href="https://www.cnesa.org/activity/?column_id=11" target="_blank" class="work-card fade-in">
         <div class="work-icon icon-event">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
-            <ellipse cx="12" cy="12" rx="4.5" ry="9" stroke="currentColor" stroke-width="1.8"/>
-            <line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.8"/>
-          </svg>
+          <img src="./images/platform_event.png" alt="活动交流" width="28" height="28">
         </div>
         <h3>活动交流</h3>
         <p>主办储能国际峰会暨展览会（ESIE），以及创新大赛、论坛活动、公益沙龙、产业培训等。</p>
@@ -758,12 +741,7 @@ ul { list-style: none; }
       </a>
       <a href="#" class="work-card fade-in">
         <div class="work-icon icon-data">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="3" y="7" width="18" height="13" rx="2.2" stroke="currentColor" stroke-width="1.8"/>
-            <path d="M8 7V5C8 3.895 8.895 3 10 3H14C15.105 3 16 3.895 16 5V7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <line x1="12" y1="11" x2="12" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <line x1="9" y1="13.5" x2="15" y2="13.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
+          <img src="./images/platform_finance.png" alt="金融服务" width="28" height="28">
         </div>
         <h3>金融服务</h3>
         <p>搭建产业金融交流平台，促进资本与技术对接，推动储能项目落地与产业规模化发展。</p>
@@ -771,10 +749,7 @@ ul { list-style: none; }
       </a>
       <a href="https://www.cnesa.org/standard/?column_id=20" target="_blank" class="work-card fade-in">
         <div class="work-icon icon-standard">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="1.8"/>
-            <polygon points="12,5 13.8,9.2 18.5,9.5 14.8,12.5 15.8,17 12,14.5 8.2,17 9.2,12.5 5.5,9.5 10.2,9.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <img src="./images/platform_standard.png" alt="联盟标准" width="28" height="28">
         </div>
         <h3>联盟标准</h3>
         <p>推动团体标准制修订，已发布 30 多项联盟标准，积极参与国际标准工作，驱动行业规范化发展。</p>
