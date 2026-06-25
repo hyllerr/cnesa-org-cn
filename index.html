@@ -3,12 +3,102 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>中关村储能产业技术联盟（CNESA）</title>
-<meta name="description" content="中关村储能产业技术联盟（CNESA）——中国第一个专注于储能领域的非营利性行业社团组织，致力于推动储能产业健康有序可持续发展。">
-<meta name="keywords" content="储能,CNESA,中关村储能产业技术联盟,新型储能,储能产业,能源存储">
+<title>中关村储能产业技术联盟（CNESA）| 储能产业权威组织 - 5A级社会组织</title>
+<meta name="description" content="中关村储能产业技术联盟（CNESA）成立于2010年，5A级社会组织，聚集800+储能产业链成员单位。提供产业研究、政策推动、标准制定、活动交流等专业服务，推动储能产业健康有序可持续发展。">
+<meta name="keywords" content="储能,CNESA,中关村储能产业技术联盟,新型储能,储能产业,能源存储,储能白皮书,储能标准,储能峰会,ESIE">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="./images/logo_cnesa.png">
+<link rel="apple-touch-icon" href="./images/logo_cnesa.png">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://www.cnesa.org/">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.cnesa.org/">
+<meta property="og:title" content="中关村储能产业技术联盟（CNESA）| 储能产业权威组织">
+<meta property="og:description" content="5A级社会组织，800+成员单位，推动储能产业健康发展。提供产业研究、政策推动、标准制定等专业服务。">
+<meta property="og:image" content="https://www.cnesa.org/images/bg_platform.PNG">
+<meta property="og:site_name" content="CNESA">
+<meta property="og:locale" content="zh_CN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.cnesa.org/">
+<meta name="twitter:title" content="CNESA - 中关村储能产业技术联盟">
+<meta name="twitter:description" content="中国第一个专注于储能领域的非营利性行业社团组织，800+成员单位">
+<meta name="twitter:image" content="https://www.cnesa.org/images/bg_platform.PNG">
+
+<!-- Hreflang for multi-language -->
+<link rel="alternate" hreflang="zh-CN" href="https://www.cnesa.org/">
+<link rel="alternate" hreflang="en" href="https://en.cnesa.org/">
+
+<!-- Preconnect and Preload -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="./images/logo_cnesa.png" as="image">
+
+<!-- Font Loading -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+<!-- Structured Data - Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "中关村储能产业技术联盟",
+  "alternateName": "CNESA",
+  "url": "https://www.cnesa.org",
+  "logo": "https://www.cnesa.org/images/logo_cnesa.png",
+  "description": "中国第一个专注于储能领域的非营利性行业社团组织，致力于推动储能产业健康有序可持续发展",
+  "foundingDate": "2010-03",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "中关村东路66号世纪科贸大厦B座25层2510室",
+    "addressLocality": "海淀区",
+    "addressRegion": "北京市",
+    "postalCode": "100190",
+    "addressCountry": "CN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+86-10-65667066",
+    "faxNumber": "+86-10-65666983",
+    "contactType": "customer service",
+    "availableLanguage": ["Chinese", "English"]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/china-energy-storage-alliance",
+    "https://x.com/CNESA_Intl",
+    "https://www.facebook.com/profile.php?id=61576181836831",
+    "https://www.instagram.com/cnesa_conference/",
+    "https://www.youtube.com/@CNESA_ESIE"
+  ],
+  "memberOf": {
+    "@type": "Organization",
+    "name": "中国能源研究会储能专业委员会"
+  }
+}
+</script>
+
+<!-- Structured Data - WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "中关村储能产业技术联盟",
+  "url": "https://www.cnesa.org",
+  "description": "储能产业权威组织，提供产业研究、政策推动、标准制定等服务",
+  "inLanguage": "zh-CN",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.cnesa.org/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
 <style>
 /* ========== Reset & Base ========== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -87,18 +177,34 @@ ul { list-style: none; }
   transition: opacity .2s;
 }
 .nav-links a:hover { opacity: 1; }
-.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
 .nav-toggle span { width: 20px; height: 1.5px; background: #1d1d1f; border-radius: 1px; transition: all .3s; }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 .mobile-menu {
   display: none; position: fixed; top: 52px; left: 0; right: 0; bottom: 0;
   background: rgba(255,255,255,.98); backdrop-filter: blur(20px);
-  padding: 32px 24px; z-index: 999;
+  padding: 32px 24px; z-index: 999; overflow-y: auto;
 }
-.mobile-menu.active { display: block; }
+.mobile-menu.active { display: block; animation: slideDown 0.3s ease-out; }
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 .mobile-menu a {
   display: block; padding: 16px 0; font-size: 17px; font-weight: 500;
   border-bottom: 1px solid rgba(0,0,0,.06); color: #1d1d1f;
+  transition: color 0.2s, padding-left 0.2s;
 }
+.mobile-menu a:hover { color: #0071e3; padding-left: 8px; }
+.mobile-menu-close {
+  position: absolute; top: 16px; right: 24px;
+  background: none; border: none; font-size: 28px; cursor: pointer;
+  color: #1d1d1f; padding: 8px; line-height: 1;
+  transition: color 0.2s, transform 0.2s;
+}
+.mobile-menu-close:hover { color: #0071e3; transform: rotate(90deg); }
 
 /* ========== Hero ========== */
 .hero {
@@ -141,6 +247,32 @@ ul { list-style: none; }
   max-width: 640px; margin: 0 auto 40px;
 }
 .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* Scroll Down Indicator */
+.scroll-indicator {
+  position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  cursor: pointer; opacity: 0.6; transition: opacity 0.3s, visibility 0.3s;
+  animation: bounce 2s infinite;
+}
+.scroll-indicator.hidden {
+  opacity: 0; visibility: hidden; pointer-events: none;
+}
+.scroll-indicator:hover { opacity: 1; }
+.scroll-indicator-arrow {
+  width: 24px; height: 24px; border-right: 2px solid #0071e3; border-bottom: 2px solid #0071e3;
+  transform: rotate(45deg);
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-10px); }
+  60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+@media (max-width: 768px) {
+  .scroll-indicator { bottom: 24px; }
+  .scroll-indicator-arrow { width: 20px; height: 20px; }
+}
 
 /* ========== Stats Bar ========== */
 .stats-bar {
@@ -429,6 +561,7 @@ ul { list-style: none; }
 /* ========== Responsive ========== */
 @media (max-width: 1024px) {
   .work-grid { grid-template-columns: repeat(2, 1fr); }
+  .work-grid .work-card:last-child { grid-column: auto; }
   .pub-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
   .platform-layout { grid-template-columns: 1fr; gap: 32px; }
@@ -440,12 +573,23 @@ ul { list-style: none; }
   .hero { min-height: auto; padding: 120px 24px 72px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
-  .work-grid { grid-template-columns: 1fr; }
+  .work-grid { grid-template-columns: 1fr; gap: 20px; }
+  .work-grid .work-card:last-child { grid-column: auto; }
+  .work-card { padding: 28px 24px; }
+  .work-card h3 { font-size: 18px; }
+  .work-card p { font-size: 14px; }
   .platform-grid { grid-template-columns: 1fr; }
-  .pub-grid { grid-template-columns: repeat(2, 1fr); }
+  .pub-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .pub-card { padding: 24px 16px; }
   .footer-grid { grid-template-columns: 1fr; gap: 40px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
   .footer-qr { flex-direction: column; align-items: flex-start; gap: 12px; }
+}
+@media (max-width: 480px) {
+  .pub-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr; gap: 24px; }
+  .hero h1 { font-size: 32px; }
+  .section-title { font-size: 26px; }
 }
 </style>
 </head>
@@ -458,27 +602,28 @@ ul { list-style: none; }
       <img src="./images/logo_cnesa.png" alt="CNESA 中关村储能产业技术联盟" class="nav-logo" loading="eager" decoding="async">
     </a>
     <div class="nav-links">
-      <a href="https://www.cnesa.org/information/?column_id=1" target="_blank">行业资讯</a>
-      <a href="https://www.cnesa.org/policy/?column_id=6" target="_blank">政策推动</a>
-      <a href="https://www.esresearch.com.cn/" target="_blank">产业研究</a>
-      <a href="https://www.cnesa.org/standard/?column_id=20" target="_blank">产业标准</a>
-      <a href="https://www.cnesa.org/activity/?column_id=11" target="_blank">活动交流</a>
-      <a href="https://www.cnesa.org/union/member/" target="_blank">联盟会员</a>
-      <a href="https://en.cnesa.org" target="_blank">English</a>
+      <a href="https://www.cnesa.org/information/?column_id=1" target="_blank" rel="noopener noreferrer">行业资讯</a>
+      <a href="https://www.cnesa.org/policy/?column_id=6" target="_blank" rel="noopener noreferrer">政策推动</a>
+      <a href="https://www.esresearch.com.cn/" target="_blank" rel="noopener noreferrer">产业研究</a>
+      <a href="https://www.cnesa.org/standard/?column_id=20" target="_blank" rel="noopener noreferrer">产业标准</a>
+      <a href="https://www.cnesa.org/activity/?column_id=11" target="_blank" rel="noopener noreferrer">活动交流</a>
+      <a href="https://www.cnesa.org/union/member/" target="_blank" rel="noopener noreferrer">联盟会员</a>
+      <a href="https://en.cnesa.org" target="_blank" rel="noopener noreferrer">English</a>
     </div>
-    <div class="nav-toggle" onclick="document.querySelector('.mobile-menu').classList.toggle('active')">
+    <button class="nav-toggle" aria-label="切换菜单" aria-expanded="false" id="menuToggle">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </div>
 </nav>
-<div class="mobile-menu">
-  <a href="https://www.cnesa.org/information/?column_id=1" target="_blank">行业资讯</a>
-  <a href="https://www.cnesa.org/policy/?column_id=6" target="_blank">政策推动</a>
-  <a href="https://www.esresearch.com.cn/" target="_blank">产业研究</a>
-  <a href="https://www.cnesa.org/standard/?column_id=20" target="_blank">产业标准</a>
-  <a href="https://www.cnesa.org/activity/?column_id=11" target="_blank">活动交流</a>
-  <a href="https://www.cnesa.org/union/member/" target="_blank">联盟会员</a>
-  <a href="https://en.cnesa.org" target="_blank">English</a>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="移动端导航菜单">
+  <button class="mobile-menu-close" aria-label="关闭菜单" id="menuClose">×</button>
+  <a href="https://www.cnesa.org/information/?column_id=1" target="_blank" rel="noopener noreferrer">行业资讯</a>
+  <a href="https://www.cnesa.org/policy/?column_id=6" target="_blank" rel="noopener noreferrer">政策推动</a>
+  <a href="https://www.esresearch.com.cn/" target="_blank" rel="noopener noreferrer">产业研究</a>
+  <a href="https://www.cnesa.org/standard/?column_id=20" target="_blank" rel="noopener noreferrer">产业标准</a>
+  <a href="https://www.cnesa.org/activity/?column_id=11" target="_blank" rel="noopener noreferrer">活动交流</a>
+  <a href="https://www.cnesa.org/union/member/" target="_blank" rel="noopener noreferrer">联盟会员</a>
+  <a href="https://en.cnesa.org" target="_blank" rel="noopener noreferrer">English</a>
 </div>
 
 <!-- ====== Hero ====== -->
@@ -494,6 +639,10 @@ ul { list-style: none; }
       <a href="https://www.cnesa.org/union/?column_id=23" target="_blank" class="btn-primary">了解联盟 →</a>
       <a href="https://www.cnesa.org/union/member/" target="_blank" class="btn-outline">加入会员</a>
     </div>
+  </div>
+  <!-- Scroll Down Indicator -->
+  <div class="scroll-indicator" id="scrollIndicator" onclick="document.querySelector('.stats-bar').scrollIntoView({ behavior: 'smooth' })">
+    <div class="scroll-indicator-arrow"></div>
   </div>
 </section>
 
@@ -824,14 +973,14 @@ ul { list-style: none; }
               <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
             </svg>
           </a>
-          <a href="https://www.instagram.com/cnesa_conference/" target="_blank" title="Instagram">
+          <a href="https://www.instagram.com/cnesa_conference/" target="_blank" rel="noopener noreferrer" title="Instagram">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
             </svg>
           </a>
-          <a href="https://www.youtube.com/@CNESA_ESIE" target="_blank" title="YouTube">
+          <a href="https://www.youtube.com/@CNESA_ESIE" target="_blank" rel="noopener noreferrer" title="YouTube">
             <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
             </svg>
           </a>
         </div>
@@ -846,9 +995,109 @@ ul { list-style: none; }
   </div>
 </footer>
 
-<!-- ====== Scroll Animation ====== -->
+<!-- ====== Scroll Animation & Mobile Menu ====== -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+  // ===== Mobile Menu Toggle =====
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuClose = document.getElementById('menuClose');
+  
+  function openMenu() {
+    mobileMenu.classList.add('active');
+    menuToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    menuClose.focus();
+  }
+  
+  function closeMenu() {
+    mobileMenu.classList.remove('active');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    menuToggle.focus();
+  }
+  
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+  }
+  
+  if (menuClose) {
+    menuClose.addEventListener('click', closeMenu);
+  }
+  
+  // Close menu when clicking outside
+  if (mobileMenu) {
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        closeMenu();
+      }
+    });
+  }
+  
+  // Close menu on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+      closeMenu();
+    }
+  });
+  
+  // Close menu when clicking on a link
+  const mobileLinks = mobileMenu?.querySelectorAll('a');
+  if (mobileLinks) {
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        setTimeout(closeMenu, 150); // Small delay for smooth transition
+      });
+    });
+  }
+
+  // ===== Scroll Down Indicator Logic =====
+  const scrollIndicator = document.getElementById('scrollIndicator');
+  
+  function checkScrollIndicator() {
+    if (!scrollIndicator) return;
+    
+    const heroSection = document.querySelector('.hero');
+    const statsBar = document.querySelector('.stats-bar');
+    
+    if (!heroSection || !statsBar) return;
+    
+    const heroBottom = heroSection.getBoundingClientRect().bottom;
+    const statsTop = statsBar.getBoundingClientRect().top;
+    const viewportHeight = window.innerHeight;
+    
+    // 如果首屏底部已经接近或超出视口，或者统计栏已经在视口中，则隐藏提示
+    if (heroBottom <= viewportHeight * 0.8 || statsTop < viewportHeight) {
+      scrollIndicator.classList.add('hidden');
+    } else {
+      scrollIndicator.classList.remove('hidden');
+    }
+  }
+  
+  // 初始检查
+  checkScrollIndicator();
+  
+  // 滚动时检查
+  let scrollTimeout;
+  window.addEventListener('scroll', () => {
+    if (scrollTimeout) {
+      cancelAnimationFrame(scrollTimeout);
+    }
+    scrollTimeout = requestAnimationFrame(checkScrollIndicator);
+  }, { passive: true });
+  
+  // 窗口大小改变时重新检查
+  window.addEventListener('resize', () => {
+    checkScrollIndicator();
+  }, { passive: true });
+
   // Fade in animation
   const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
